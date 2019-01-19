@@ -45,6 +45,7 @@ int main(int argc, char *argv[]) {
     Maze mm = Maze(vWalls, hWalls) ;
     suint x = 15, y = 0 ;
     while (!mm.checkCenter(x, y)) {
+		// TODO: in arduino, check for walls and update with setWall(x, y)
         mm.floodfill(x, y) ;
         suint xx(x), yy(y) ;
 		mm.minNeighbor(x, y, xx, yy) ;
