@@ -41,55 +41,10 @@ int main(int argc, char *argv[]) {
         file.close() ;
 		cout << "Input is done" << endl;
     }
-	/* for (int jj = 0 ; jj < 16 ; jj++) { */
-	/* 		string line1, line2 ; */
-	/* 		for (int ii = 0 ; ii < 16 ; ii++) { */
-	/* 			line1 += "+" ; */
-	/* 			if (hWalls[jj][ii]) */
-	/* 				line1 += "-" ; */
-	/* 			else */
-	/* 				line1 += " " ; */
-	/* 			if (vWalls[jj][ii]) */
-	/* 				line2 += "|" ; */
-	/* 			else */
-	/* 				line2 += " " ; */
-	/* 			line2 += " " ; */
-	/* 		} */
-	/* 		line1 += "+\n" ; */
-	/* 		line2 += "|\n" ; */
-	/* 		cout << line1 << line2 ; */
-	/* 	} */
-	/* cout << "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+" ; */
-	/* cout << endl ; */
-	/* return 0 ; */
 
     Maze mm = Maze(vWalls, hWalls) ;
     suint x = 15, y = 0 ;
     while (!mm.checkCenter(x, y)) {
-		/* cout << "New Graph" << endl ; */
-		/* for (int jj = 0 ; jj < 16 ; jj++) { */
-		/* 	string line1, line2 ; */
-		/* 	for (int ii = 0 ; ii < 16 ; ii++) { */
-		/* 		line1 += "+" ; */
-		/* 		if (mm.getNorthWall(jj, ii)) */
-		/* 			line1 += "--" ; */
-		/* 		else */
-		/* 			line1 += "  " ; */
-		/* 		if (mm.getWestWall(jj, ii)) */
-		/* 			line2 += "|" ; */
-		/* 		else */
-		/* 			line2 += " " ; */
-		/* 		string temp = to_string(mm.getVal(jj, ii)) ; */
-		/* 		if (temp.length() < 2) */
-		/* 			line2 += " " ; */
-		/* 		line2 += temp ; */
-		/* 	} */
-		/* 	line1 += "+\n" ; */
-		/* 	line2 += "|\n" ; */
-		/* 	cout << line1 << line2 ; */
-		/* } */
-		/* cout << "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+" ; */
-		/* cout << endl ; */
         mm.floodfill(x, y) ;
         suint xx(x), yy(y) ;
 		mm.minNeighbor(x, y, xx, yy) ;

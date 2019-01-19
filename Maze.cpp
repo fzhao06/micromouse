@@ -1,14 +1,7 @@
 #include "Maze.h"
-#include <iostream>
 
 Maze::Maze(suint vv[16][17], suint hh[17][16]) {
 
-	/* for (int ii = 0 ; ii < 16 ; ii++) { */
-	/* 	vWalls[ii][0] = 1 ; */
-	/* 	vWalls[ii][16] = 1 ; */
-	/* 	hWalls[0][ii] = 1 ; */
-	/* 	hWalls[16][ii] = 1 ; */
-	/* } */
 	for (int ii = 0 ; ii < 16 ; ii++) {
 		vWalls[ii][16] = 1 ;
 		vWalls[ii][0] = 1 ;
